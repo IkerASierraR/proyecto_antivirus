@@ -6,6 +6,7 @@ from views.settings_view import SettingsView
 from views.quarantine_view import QuarantineView
 from views.cleaning_view import CleaningView
 from views.update_view import UpdateView
+from views.firewall_view import FirewallView
 from engine_bridge import EngineBridge
 from utils import resource_path
 import sys
@@ -93,8 +94,7 @@ class SecureGuardApp(ctk.CTk):
 
     def show_firewall(self):
         self.clear_main_frame()
-        from views.settings_view import SettingsView
-        view = SettingsView(self.main_frame, self.bridge, only_firewall=True)
+        view = FirewallView(self.main_frame, self.bridge)
         view.pack(fill="both", expand=True)
         self.views['firewall'] = view
 
@@ -118,7 +118,7 @@ class SecureGuardApp(ctk.CTk):
 
     def show_settings(self):
         self.clear_main_frame()
-        view = SettingsView(self.main_frame, self.bridge, only_firewall=False)
+        view = SettingsView(self.main_frame, self.bridge)
         view.pack(fill="both", expand=True)
         self.views['settings'] = view
 
