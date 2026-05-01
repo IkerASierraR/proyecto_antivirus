@@ -1,0 +1,32 @@
+# Rust
+backend_rust/target/
+backend_rust/**/*.rs.bk
+backend_rust/*.pdb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Entorno virtual
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.exe
+*.dll
+
+# Firmas grandes (opcional - si tu archivo pesa mucho)
+# frontend_python/assets/signatures/malware_hashes.txt
